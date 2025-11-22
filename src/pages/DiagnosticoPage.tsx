@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import MemberLayout from '../components/members/MemberLayout';
-import { Brain, AlertCircle, ArrowRight, Activity } from 'lucide-react';
+import { Brain, AlertCircle, ArrowRight, Activity, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const DiagnosticoPage: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'quiz' | 'result'>('quiz');
-    const [scores, setScores] = useState({
-        emocional: 0,
-        habito: 0,
-        social: 0,
-        fisiologico: 0
-    });
+    const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
 
     const questions = [
         {
@@ -45,11 +40,24 @@ const DiagnosticoPage: React.FC = () => {
         }
     ];
 
-    const handleAnswer = (type: string) => {
-        setScores(prev => ({ ...prev, [type]: prev[type as keyof typeof scores] + 1 }));
+    const handleAnswer = (questionId: number, type: string) => {
+        setSelectedAnswers(prev => ({ ...prev, [questionId]: type }));
     };
 
     const getResult = () => {
+        const scores = {
+            emocional: 0,
+            habito: 0,
+            social: 0,
+            fisiologico: 0
+        };
+
+        Object.values(selectedAnswers).forEach(type => {
+            if (type in scores) {
+                scores[type as keyof typeof scores]++;
+            }
+        });
+
         const maxScore = Math.max(...Object.values(scores));
         const resultType = Object.keys(scores).find(key => scores[key as keyof typeof scores] === maxScore);
 
@@ -87,6 +95,8 @@ const DiagnosticoPage: React.FC = () => {
         }
     };
 
+    const allAnswered = Object.keys(selectedAnswers).length === questions.length;
+
     return (
         <MemberLayout>
             <div className="max-w-4xl mx-auto">
@@ -106,24 +116,37 @@ const DiagnosticoPage: React.FC = () => {
                             <div key={q.id} className="bg-brand-surface p-6 rounded-2xl border border-gray-800">
                                 <h3 className="text-xl font-bold text-white mb-4">{index + 1}. {q.text}</h3>
                                 <div className="grid md:grid-cols-2 gap-4">
-                                    {q.options.map((opt, i) => (
-                                        <button
-                                            key={i}
-                                            onClick={() => handleAnswer(opt.type)}
-                                            className="text-left p-4 rounded-xl bg-black/40 border border-gray-700 hover:border-brand-red hover:bg-brand-red/5 transition-all text-brand-muted hover:text-white"
-                                        >
-                                            {opt.text}
-                                        </button>
-                                    ))}
+                                    {q.options.map((opt, i) => {
+                                        const isSelected = selectedAnswers[q.id] === opt.type;
+                                        return (
+                                            <button
+                                                key={i}
+                                                onClick={() => handleAnswer(q.id, opt.type)}
+                                                className={`text-left p-4 rounded-xl border transition-all ${isSelected
+                                                    ? 'bg-brand-red text-white border-brand-red shadow-lg shadow-brand-red/20'
+                                                    : 'bg-black/40 border-gray-700 text-brand-muted hover:border-brand-red/50 hover:text-white'
+                                                    }`}
+                                            >
+                                                <div className="flex items-center justify-between">
+                                                    <span>{opt.text}</span>
+                                                    {isSelected && <Check className="w-5 h-5 flex-shrink-0" />}
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}
                         <div className="text-center pt-8">
                             <button
                                 onClick={() => setActiveTab('result')}
-                                className="bg-brand-red hover:bg-brand-darkRed text-white font-bold py-4 px-12 rounded-full text-lg transition-all shadow-lg shadow-brand-red/20"
+                                disabled={!allAnswered}
+                                className={`font-bold py-4 px-12 rounded-full text-lg transition-all ${allAnswered
+                                    ? 'bg-brand-red hover:bg-brand-darkRed text-white shadow-lg shadow-brand-red/20 cursor-pointer'
+                                    : 'bg-gray-800 text-gray-500 cursor-not-allowed'
+                                    }`}
                             >
-                                Ver Meu Diagnóstico
+                                {allAnswered ? 'Ver Meu Diagnóstico' : 'Responda todas as perguntas'}
                             </button>
                         </div>
                     </div>

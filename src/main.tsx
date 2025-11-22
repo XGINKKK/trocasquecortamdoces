@@ -16,6 +16,7 @@ import DiagnosticoPage from './pages/DiagnosticoPage.tsx'
 import ProtocoloPage from './pages/ProtocoloPage.tsx'
 import RupturaPage from './pages/RupturaPage.tsx'
 import AntiRecaidaPage from './pages/AntiRecaidaPage.tsx'
+import EntregavelDownPage from './pages/EntregavelDownPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
   {
     path: '/entregavel1/anti-recaida',
     element: <AntiRecaidaPage />,
+  },
+  {
+    path: '/entregaveldown',
+    element: <EntregavelDownPage />,
   },
 ])
 
