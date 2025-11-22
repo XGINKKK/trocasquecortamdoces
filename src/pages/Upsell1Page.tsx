@@ -27,7 +27,7 @@ const Upsell1Page: React.FC = () => {
                         description="Descubra qual dos 5 gatilhos emocionais é o SEU responsável por ativar o impulso. Pare de lutar contra o inimigo errado."
                         icon={<Brain />}
                         buttonText="Iniciar Diagnóstico"
-                        href="#"
+                        href="/entregavel1/diagnostico"
                         delay={0.1}
                     />
 
@@ -36,7 +36,7 @@ const Upsell1Page: React.FC = () => {
                         description="Sequência de 7 dias que recondiciona o cérebro a perder o hábito de buscar doce como recompensa automática."
                         icon={<Activity />}
                         buttonText="Acessar Protocolo"
-                        href="#"
+                        href="/entregavel1/protocolo"
                         delay={0.2}
                     />
 
@@ -45,7 +45,7 @@ const Upsell1Page: React.FC = () => {
                         description="Ferramentas práticas que cortam o looping: Ansiedade → Doce → Culpa → Mais Doce."
                         icon={<Repeat />}
                         buttonText="Ver Ferramentas"
-                        href="#"
+                        href="/entregavel1/ruptura"
                         delay={0.3}
                     />
 
@@ -54,7 +54,7 @@ const Upsell1Page: React.FC = () => {
                         description="Rotina blindada de 30 dias para consolidar o novo comportamento e garantir que você nunca mais volte à estaca zero."
                         icon={<Shield />}
                         buttonText="Baixar Plano 30 Dias"
-                        href="#"
+                        href="/entregavel1/anti-recaida"
                         delay={0.4}
                     />
                 </div>

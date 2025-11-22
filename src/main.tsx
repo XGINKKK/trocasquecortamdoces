@@ -12,6 +12,10 @@ import MembersPremium from './pages/MembersPremium.tsx'
 import CheckoutMockup from './pages/CheckoutMockup.tsx'
 import Upsell1Page from './pages/Upsell1Page.tsx'
 import ProductsPage from './pages/ProductsPage.tsx'
+import DiagnosticoPage from './pages/DiagnosticoPage.tsx'
+import ProtocoloPage from './pages/ProtocoloPage.tsx'
+import RupturaPage from './pages/RupturaPage.tsx'
+import AntiRecaidaPage from './pages/AntiRecaidaPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -49,6 +53,26 @@ const router = createBrowserRouter([
   {
     path: '/products',
     element: <ProductsPage />,
+  },
+  {
+    path: '/entregavel1',
+    element: <Upsell1Page />,
+  },
+  {
+    path: '/entregavel1/diagnostico',
+    element: <DiagnosticoPage />,
+  },
+  {
+    path: '/entregavel1/protocolo',
+    element: <ProtocoloPage />,
+  },
+  {
+    path: '/entregavel1/ruptura',
+    element: <RupturaPage />,
+  },
+  {
+    path: '/entregavel1/anti-recaida',
+    element: <AntiRecaidaPage />,
   },
 ])
 
