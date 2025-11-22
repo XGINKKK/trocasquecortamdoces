@@ -18,7 +18,7 @@ const MembersBasic: React.FC = () => {
                         description="O manual completo com as substituições que vão enganar seu cérebro e cortar a vontade de doce."
                         icon={<BookOpen />}
                         buttonText="Baixar PDF"
-                        href="#" // Placeholder link
+                        href="/downloads/Trocas-que-CORTAM-a-Vontade-de-Doce.pdf"
                         delay={0.1}
                     />
 

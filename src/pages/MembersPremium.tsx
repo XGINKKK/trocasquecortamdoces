@@ -23,7 +23,7 @@ const MembersPremium: React.FC = () => {
                             description="O manual completo. Comece por aqui para entender os fundamentos e aplicar as primeiras trocas imediatas."
                             icon={<BookOpen />}
                             buttonText="Baixar Guia Completo (PDF)"
-                            href="#"
+                            href="/downloads/Trocas-que-CORTAM-a-Vontade-de-Doce.pdf"
                             delay={0.1}
                         />
                     </div>
@@ -34,7 +34,7 @@ const MembersPremium: React.FC = () => {
                         description="Plano de ação de emergência para momentos de crise aguda de vontade de doce."
                         icon={<Shield />}
                         buttonText="Acessar Protocolo"
-                        href="#"
+                        href="/downloads/PARE-Nao-coma-ainda.pdf"
                         delay={0.2}
                     />
 
@@ -43,7 +43,7 @@ const MembersPremium: React.FC = () => {
                         description="Ferramenta para identificar e neutralizar os gatilhos emocionais e ambientais."
                         icon={<Zap />}
                         buttonText="Acessar Ferramenta"
-                        href="#"
+                        href="/downloads/Mapa-dos-Gatilhos-Ocultos.pdf"
                         delay={0.3}
                     />
 
@@ -52,7 +52,7 @@ const MembersPremium: React.FC = () => {
                         description="Áudios e exercícios para limpar a dependência emocional do açúcar."
                         icon={<Smile />}
                         buttonText="Acessar Detox"
-                        href="#"
+                        href="/downloads/Desintoxicacao-Emocional-em-24h.pdf"
                         delay={0.4}
                     />
                 </div>
