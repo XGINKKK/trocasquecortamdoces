@@ -10,6 +10,8 @@ import Downsell2Page from './pages/Downsell2Page.tsx'
 import MembersBasic from './pages/MembersBasic.tsx'
 import MembersPremium from './pages/MembersPremium.tsx'
 import CheckoutMockup from './pages/CheckoutMockup.tsx'
+import Upsell1Page from './pages/Upsell1Page.tsx'
+import ProductsPage from './pages/ProductsPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
   {
     path: '/checkout-mockup',
     element: <CheckoutMockup />,
+  },
+  {
+    path: '/upsell1',
+    element: <Upsell1Page />,
+  },
+  {
+    path: '/products',
+    element: <ProductsPage />,
   },
 ])
 
