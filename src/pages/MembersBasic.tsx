@@ -29,7 +29,7 @@ const MembersBasic: React.FC = () => {
                             Desbloqueie o Protocolo Completo com 3 Bônus Exclusivos por apenas R$ 9,90.
                         </p>
                         <a
-                            href="/up"
+                            href="https://www.ggcheckout.com/checkout/v2/XrkcNcyFJ9STMclXnBqf"
                             className="bg-brand-red hover:bg-brand-darkRed text-white font-bold py-2 px-6 rounded-lg transition-colors w-full"
                         >
                             Fazer Upgrade Agora

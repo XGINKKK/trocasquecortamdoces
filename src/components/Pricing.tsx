@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, Info, Clock, Flame } from 'lucide-react';
 import { Button } from './Button';
+import DownsellPopup from './DownsellPopup';
 
 const Pricing: React.FC = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes in seconds
 
     useEffect(() => {
@@ -18,6 +20,20 @@ const Pricing: React.FC = () => {
         const mins = Math.floor(seconds / 60);
         const secs = seconds % 60;
         return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    };
+
+    const handleBasicClick = () => {
+        setIsPopupOpen(true);
+    };
+
+    const handleAcceptDiscount = () => {
+        setIsPopupOpen(false);
+        window.location.href = "https://www.ggcheckout.com/checkout/v2/XrkcNcyFJ9STMclXnBqf";
+    };
+
+    const handleDeclineDiscount = () => {
+        setIsPopupOpen(false);
+        window.location.href = "https://www.ggcheckout.com/checkout/v2/yJHc1za9rgiJdJn9Ub4v";
     };
 
     return (
@@ -78,7 +94,7 @@ const Pricing: React.FC = () => {
                             </li>
                         </ul>
 
-                        <Button variant="primary" fullWidth onClick={() => window.location.href = 'https://www.ggcheckout.com/checkout/v2/yJHc1za9rgiJdJn9Ub4v'} className="bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 border-gray-600">
+                        <Button variant="primary" fullWidth onClick={handleBasicClick} className="bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 border-gray-600">
                             Quero o Manual
                         </Button>
                     </motion.div>
@@ -142,6 +158,13 @@ const Pricing: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <DownsellPopup
+                isOpen={isPopupOpen}
+                onClose={() => setIsPopupOpen(false)}
+                onAccept={handleAcceptDiscount}
+                onDecline={handleDeclineDiscount}
+            />
         </section>
     );
 };

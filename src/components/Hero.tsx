@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-8">
-            <Button size="lg" className="w-full sm:w-auto group shadow-brand-red/50 shadow-lg bg-gradient-to-r from-brand-red to-brand-darkRed border-none">
+            <Button size="lg" onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto group shadow-brand-red/50 shadow-lg bg-gradient-to-r from-brand-red to-brand-darkRed border-none">
               Quero Cortar a Vontade Agora
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

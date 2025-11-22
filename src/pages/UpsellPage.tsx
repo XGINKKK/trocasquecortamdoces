@@ -148,6 +148,7 @@ const UpsellPage: React.FC = () => {
                         <div className="flex flex-col items-center gap-4 mb-8">
                             <Button
                                 size="lg"
+                                onClick={() => window.location.href = 'https://www.ggcheckout.com/checkout/v2/XrkcNcyFJ9STMclXnBqf'}
                                 className="w-full md:w-auto text-lg px-12 bg-gradient-to-r from-brand-red to-brand-darkRed border-none shadow-2xl shadow-brand-red/50"
                             >
                                 Sim, Quero o Detox Completo

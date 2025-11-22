@@ -7,9 +7,10 @@ interface DownsellPopupProps {
     isOpen: boolean;
     onClose: () => void;
     onAccept: () => void;
+    onDecline: () => void;
 }
 
-const DownsellPopup: React.FC<DownsellPopupProps> = ({ isOpen, onClose, onAccept }) => {
+const DownsellPopup: React.FC<DownsellPopupProps> = ({ isOpen, onClose, onAccept, onDecline }) => {
     return (
         <AnimatePresence>
             {isOpen && (
@@ -65,7 +66,7 @@ const DownsellPopup: React.FC<DownsellPopupProps> = ({ isOpen, onClose, onAccept
                                 <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
                             <button
-                                onClick={onClose}
+                                onClick={onDecline}
                                 className="w-full py-3 text-sm text-gray-400 hover:text-gray-600 font-medium"
                             >
                                 Não obrigado, prefiro continuar sem o método.
