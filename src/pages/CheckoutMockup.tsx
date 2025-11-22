@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Shield, Lock, CreditCard, Clock, Flame } from 'lucide-react';
 import { Button } from '../components/Button';
 import ParticleBackground from '../components/ParticleBackground';

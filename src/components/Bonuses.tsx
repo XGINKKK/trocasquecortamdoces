@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { Shield, Zap, Smile } from 'lucide-react';
 
 // Floating animation (same as Hero)
-const floatingTarget = { y: [0, -12, 0], rotate: [0, 2, -2, 0] } as const;
+const floatingTarget = { y: [0, -12, 0], rotate: [0, 2, -2, 0] };
 const floatingTransition = { duration: 5, repeat: Infinity, ease: 'linear' as const };
 
 // 3D mockup component with mouse‑parallax and back cover for depth

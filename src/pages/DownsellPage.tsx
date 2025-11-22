@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Clock, AlertTriangle, ArrowRight, Shield } from 'lucide-react';
+import { Check, AlertTriangle, ArrowRight, Shield } from 'lucide-react';
 import { Button } from '../components/Button';
 
 const DownsellPage: React.FC = () => {
