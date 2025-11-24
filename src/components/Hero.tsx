@@ -60,6 +60,7 @@ const Hero: React.FC = () => {
 
           {/* VSL Player */}
           <div className="w-full max-w-[800px] mx-auto mb-12 shadow-2xl rounded-xl overflow-hidden border border-white/10 bg-black">
+            {/* @ts-ignore */}
             <vturb-smartplayer id="vid-6923b1715c8042a2b56fc09a" style={{ display: 'block', margin: '0 auto', width: '100%' }}></vturb-smartplayer>
           </div>
 
