@@ -143,7 +143,7 @@ const Downsell2Page: React.FC = () => {
                             <p className="text-brand-muted mb-6">Última chance. Preço ridículo.</p>
 
                             <div className="flex items-end justify-center gap-4 mb-2">
-                                <span className="text-6xl font-black text-red-500">R$ 9,90</span>
+                                <span className="text-6xl font-black text-red-500">R$ 17,00</span>
                                 <span className="text-2xl text-gray-400 line-through mb-2">R$ 27</span>
                             </div>
                             <p className="text-sm text-gray-400">Menos que um combo do McDonald's.</p>

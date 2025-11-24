@@ -26,7 +26,7 @@ const MembersBasic: React.FC = () => {
                     <div className="bg-gradient-to-br from-brand-red/10 to-black rounded-2xl p-6 border border-brand-red/30 flex flex-col items-center text-center justify-center h-full">
                         <h3 className="text-xl font-bold text-white mb-2">Quer acelerar seus resultados?</h3>
                         <p className="text-brand-muted text-sm mb-4">
-                            Desbloqueie o Protocolo Completo com 3 Bônus Exclusivos por apenas R$ 5,99.
+                            Desbloqueie o Protocolo Completo com 3 Bônus Exclusivos por apenas R$ 37,00.
                         </p>
                         <a
                             href="https://www.ggcheckout.com/checkout/v2/XrkcNcyFJ9STMclXnBqf"

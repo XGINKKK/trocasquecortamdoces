@@ -110,7 +110,7 @@ const DownsellPage: React.FC = () => {
                         <div className="text-center mb-8">
                             <h3 className="text-2xl font-bold mb-4">Preço Especial</h3>
                             <div className="flex items-end justify-center gap-4 mb-2">
-                                <span className="text-6xl font-black text-brand-gold">R$ 19,90</span>
+                                <span className="text-6xl font-black text-brand-gold">R$ 27,00</span>
                                 <span className="text-2xl text-gray-400 line-through mb-2">R$ 47</span>
                             </div>
                             <p className="text-brand-muted">Pagamento único. Acesso imediato.</p>
